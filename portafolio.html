@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Mi portafolio<span></span></div>
+    <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<section id="inicio" class="hero">
+    <div class="hero-text">
+        <h1>Hola, soy <span class="highlight">Doménica</span></h1>
+        <p>Estudio desarrollo de software. Creo páginas web creativas y funcionales.</p>
+        <a href="#sobre-mi" class="btn">Conóceme más</a>
+    </div>
+    <img src="imagenes/WhatsApp Image 2026-10-31 at 10.48.00 PM.jpeg" alt="Foto de Doménica">
+</section>
+
+<section id="sobre-mi" class="projects">
+    <h2>Sobre mí y lo que me gusta</h2>
+    <div class="projects-container">
+        
+        
+        <div class="card">
+            <img src="imagenes/vector-guapa-bailarina-chica-bailando-ballet-dibujos-animados-icono-vectorial-ilustracion-diseno-logotipo_1241361-631.avif" alt="Ballet">
+            <div class="card-content">
+                <h3>Ballet</h3>
+                <p>Me gusta mucho lo que es ballet y llegué a estar en una academia 5 años.</p>
+                <button class="btn-ver" onclick="toggleInfo('info-ballet')">Ver más</button>
+                <div id="info-ballet" class="info-oculta">
+                    <p>Algo que me gustaba desde pequeña, lo que más me interesaba era la parte de la gimnasia. Bailé por 5 años.</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="card">
+            <img src="imagenes/Lore-en-videojuegos-origen-y-significado.jpg" alt="Videojuegos">
+            <div class="card-content">
+                <h3>Videojuegos y Puzles</h3>
+                <p>Me gustan mucho los videojuegos, desde chiquita jugaba con mi tío.</p>
+                <button class="btn-ver" onclick="toggleInfo('info-juegos')">Ver más</button>
+                <div id="info-juegos" class="info-oculta">
+                    <p>Desde chiquita me gustan los videojuegos. Los juegos que más me interesan son de acción y peleas; entre los que he jugado están: <em>The Last of Us</em>, <em>God of War</em>, <em>Grand Theft Auto V</em>, <em>Resident Evil</em> y <em>Mortal Kombat</em>.</p>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="card">
+            <img src="imagenes/04_0.jpg" alt="Desarrollo Web">
+            <div class="card-content">
+                <h3>Desarrollo Web</h3>
+                <p>Me encanta crear páginas web creativas y funcionales con código.</p>
+                <button class="btn-ver" onclick="toggleInfo('info-programacion')">Ver más</button>
+                <div id="info-programacion" class="info-oculta">
+                    <p>Me gusta mucho aprender sobre HTML, CSS y JavaScript para dar vida a mis proyectos, me interesan los códigos y cada día aprendo más.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <img src="imagenes/images.jpeg" alt="Dibujar">
+            <div class="card-content">
+                <h3>Dibujar</h3>
+                <p>Me encanta dibujar para distraerme.</p>
+                <button class="btn-ver" onclick="toggleInfo('info-dibujar')">Ver más</button>
+                <div id="info-dibujar" class="info-oculta">
+                    <p>Me gusta mucho el dibujo, como los paisajes, flores o mandalas y también pintarlas.</p>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="card">
+            <img src="imagenes/istockphoto-2121353141-612x612.jpg" alt="Basket">
+            <div class="card-content">
+                <h3>Basket</h3>
+                <p>Ese ha sido mi deporte favorito desde que era chiquita.</p>
+                <button class="btn-ver" onclick="toggleInfo('info-basket')">Ver más</button>
+                <div id="info-basket" class="info-oculta">
+                    <p>Desde pequeña he jugado basket, lo llegué a practicar 5 años y también competía de vez en cuando.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/WhatsApp Image 2026-11-01 at 12.00.17 PM.jpeg" alt="Datos de mi">
+            <div class="card-content">
+                <h3>Datos</h3>
+                <p>Datos extra para que me conozcas mas.</p>
+                <button class="btn-ver" onclick="toggleInfo('info-datos')">Ver más</button>
+                <div id="info-datos" class="info-oculta">
+                    <p>Soy de Cuenca-Ecuaodor,  
+                        Tengo 17 años, 
+                        Cumplo el 9 de enero del 2009,
+                        Mi comida favorita es el sushi,
+                        Mi raza de perro favorita es el golden, 
+                        Amo a los leones, 
+                        Tengo una hermana menor, 
+                        Mi color favorito es el rojo, rosado, blanco y negro,
+                        Amo los peluches y las flores,
+                        Me encantan las gomitas y los chocolates.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contacto" class="contact">
+    <h2>Contacto</h2> 
+    <p>¿Hablamos? Escríbeme a <a href="mailto:domenicas115@gmail.com">domenicas115@gmail.com</a></p>
+</section>
+
+<footer>
+    <p>© 2026 Doménica</p>
+</footer>
+
+<script>
+    function toggleInfo(id) {
+        var elemento = document.getElementById(id);
+        if (elemento.style.display === "block") {
+            elemento.style.display = "none";
+        } else {
+            elemento.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
